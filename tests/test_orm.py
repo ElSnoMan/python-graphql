@@ -1,3 +1,15 @@
+""" Tests against our ORM service
+
+1. Spin up uvicorn server
+    $ poetry run poe orm
+
+2. Run tests
+"""
+from typing import Dict
+import requests
+import pytest
+
+
 def test_create_user(client):
     query = """
     mutation {
